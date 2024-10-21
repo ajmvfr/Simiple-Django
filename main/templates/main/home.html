@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simple test page</title>
+
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+          }
+    </style>
+
+</head>
+<body>
+    
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        Id
+                    </th>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Sort Order
+                    </th>
+                    <th>
+                        Active
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+            {% for type in types  %}
+                <tr>
+                    <td>
+                        {{type.id}}
+                    </td>
+                    <td>
+                        {{type.name}}
+                    </td>
+                    <td>
+                        {{type.sort_order}}
+                    </td>
+                    <td>
+                        {{type.active}}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+</body>
+</html>
