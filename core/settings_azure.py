@@ -2,6 +2,8 @@ import os
 from .settings import *
 from .settings import BASE_DIR
 
+print(f'Azure settings')
+
 SECRET_KEY = os.environ['SECRET_KEY']
 ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME'],'.ajmvfr.xyz','.anthonymorgan.xyz']
 print(f"website host: {os.environ['WEBSITE_HOSTNAME']}")

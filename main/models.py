@@ -8,3 +8,5 @@ class Type(models.Model):
     name = models.CharField(max_length=200)
     sort_order = models.IntegerField(null=True,blank=True)
     active = models.BooleanField(default=True)
+    created_on = models.DateTimeField(auto_now_add=True)
+    modified_on = models.DateTimeField(auto_now=True)
