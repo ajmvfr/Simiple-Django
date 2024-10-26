@@ -14,7 +14,7 @@ from django.core.wsgi import get_wsgi_application
 
 print(f'host name: {socket.gethostname()}')
 
-settings_module = 'core.settings_azure' if socket.gethostname() != 'Surface7' else 'core.settings'
+settings_module = 'core.settings_digitalocean' if socket.gethostname() != 'Surface7' else 'core.settings'
 
 # settings_module = 'core.settings_azure' if 'WEBSITE_HOSTNAME' in os.environ else 'core.settings'
 

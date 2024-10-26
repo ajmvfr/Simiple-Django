@@ -8,7 +8,7 @@ import socket
 def main():
     """Run administrative tasks."""
     
-    settings_module = 'core.settings_azure' if socket.gethostname() != 'Surface7' else 'core.settings'
+    settings_module = 'core.settings_digitalocean' if socket.gethostname() != 'Surface7' else 'core.settings'
 
     # settings_module = 'core.settings_azure' if 'WEBSITE_HOSTNAME' in os.environ else 'core.settings'
     
