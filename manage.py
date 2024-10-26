@@ -2,11 +2,16 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
+import socket
 
 
 def main():
     """Run administrative tasks."""
-    settings_module = 'core.settings_azure' if 'WEBSITE_HOSTNAME' in os.environ else 'core.settings'
+    
+    settings_module = 'core.settings_azure' if socket.gethostname() != 'Surface7' else 'core.settings'
+
+    # settings_module = 'core.settings_azure' if 'WEBSITE_HOSTNAME' in os.environ else 'core.settings'
+    
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', settings_module)
     # os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'core.settings')
     try:
