@@ -7,8 +7,9 @@ print(f'Azure settings')
 SECRET_KEY = os.environ['SECRET_KEY']
 ALLOWED_HOSTS = ['*','.ajmvfr.xyz','.anthonymorgan.xyz']
 # ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME'],'.ajmvfr.xyz','.anthonymorgan.xyz']
-print(f"website host: {os.environ['WEBSITE_HOSTNAME']}")
-CSRF_TRUSTED_ORIGINS = ['https://' + os.environ['WEBSITE_HOSTNAME'],'https://*.ajmvfr.xyz','https://*.anthonymorgan.xyz']
+# print(f"website host: {os.environ['WEBSITE_HOSTNAME']}")
+# CSRF_TRUSTED_ORIGINS = ['https://' + os.environ['WEBSITE_HOSTNAME'],'https://*.ajmvfr.xyz','https://*.anthonymorgan.xyz']
+CSRF_TRUSTED_ORIGINS = ['*','https://*.ajmvfr.xyz','https://*.anthonymorgan.xyz']
 DEBUG = True
 
 
