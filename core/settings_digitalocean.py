@@ -9,7 +9,7 @@ ALLOWED_HOSTS = ['*','.ajmvfr.xyz','.anthonymorgan.xyz','localhost','127.0.0.1',
 # ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME'],'.ajmvfr.xyz','.anthonymorgan.xyz']
 print(f"website host: {os.environ['WEBSITE_HOSTNAME']}")
 # CSRF_TRUSTED_ORIGINS = ['https://' + os.environ['WEBSITE_HOSTNAME'],'https://*.ajmvfr.xyz','https://*.anthonymorgan.xyz']
-CSRF_TRUSTED_ORIGINS = ['https://' + os.environ['WEBSITE_HOSTNAME'],'https://*.ajmvfr.xyz','https://*.anthonymorgan.xyz','https://localhost','http://localhost','https://127.0.0.1','https://198.199.69.215','https://198.199.69.215']
+# CSRF_TRUSTED_ORIGINS = ['https://' + os.environ['WEBSITE_HOSTNAME'],'https://*.ajmvfr.xyz','https://*.anthonymorgan.xyz','https://localhost','http://localhost','https://127.0.0.1','https://198.199.69.215','https://198.199.69.215']
 DEBUG = True
 
 
@@ -60,10 +60,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'myproject',
-        'HOST': 'localhost',
-        'USER': 'myprojectuser',
-        'PASSWORD': 'password',
+        'NAME': os.environ['NAME'],
+        'HOST': os.environ['HOST'],
+        'USER': os.environ['USER'],
+        'PASSWORD': os.environ['PASSWORD'],
         'PORT': '',
     }
 }
