@@ -2,7 +2,7 @@ import os
 from .settings import *
 from .settings import BASE_DIR
 
-print(f'Azure settings')
+print(f'DigitalOcean settings')
 
 SECRET_KEY = os.environ['SECRET_KEY']
 ALLOWED_HOSTS = ['*','.ajmvfr.xyz','.anthonymorgan.xyz','localhost','127.0.0.1','198.199.69.215']
