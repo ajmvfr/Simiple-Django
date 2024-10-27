@@ -5,11 +5,11 @@ from .settings import BASE_DIR
 print(f'Azure settings')
 
 SECRET_KEY = os.environ['SECRET_KEY']
-ALLOWED_HOSTS = ['*','.ajmvfr.xyz','.anthonymorgan.xyz']
+ALLOWED_HOSTS = ['*','.ajmvfr.xyz','.anthonymorgan.xyz','localhost','127.0.0.1','198.199.69.215']
 # ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME'],'.ajmvfr.xyz','.anthonymorgan.xyz']
 print(f"website host: {os.environ['WEBSITE_HOSTNAME']}")
 # CSRF_TRUSTED_ORIGINS = ['https://' + os.environ['WEBSITE_HOSTNAME'],'https://*.ajmvfr.xyz','https://*.anthonymorgan.xyz']
-CSRF_TRUSTED_ORIGINS = ['https://' + os.environ['WEBSITE_HOSTNAME'],'https://*.ajmvfr.xyz','https://*.anthonymorgan.xyz']
+CSRF_TRUSTED_ORIGINS = ['https://' + os.environ['WEBSITE_HOSTNAME'],'https://*.ajmvfr.xyz','https://*.anthonymorgan.xyz','localhost','127.0.0.1','198.199.69.215']
 DEBUG = True
 
 
@@ -45,18 +45,27 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 #     }
 # }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': os.environ['DB_NAME'],
+#         'HOST': os.environ['DB_HOST'],
+#         'USER': os.environ['DB_USER'],
+#         'PASSWORD': os.environ['DB_PASSWORD'],
+#         'PORT': os.environ['DB_PORT']
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ['DB_NAME'],
-        'HOST': os.environ['DB_HOST'],
-        'USER': os.environ['DB_USER'],
-        'PASSWORD': os.environ['DB_PASSWORD'],
-        'PORT': os.environ['DB_PORT']
+        'NAME': 'myproject',
+        'HOST': 'localhost',
+        'USER': 'myprojectuser',
+        'PASSWORD': 'password',
+        'PORT': '',
     }
 }
-
-
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 
