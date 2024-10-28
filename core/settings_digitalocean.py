@@ -5,6 +5,8 @@ from .settings import BASE_DIR
 print(f'DigitalOcean settings')
 
 SECRET_KEY = os.environ['SECRET_KEY']
+print('Secret')
+print(f'secret {SECRET_KEY}')
 ALLOWED_HOSTS = ['*','.ajmvfr.xyz','.anthonymorgan.xyz','localhost','127.0.0.1','143.244.151.87']
 # ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME'],'.ajmvfr.xyz','.anthonymorgan.xyz']
 print(f"website host: {os.environ['WEBSITE_HOSTNAME']}")
