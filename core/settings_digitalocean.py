@@ -59,18 +59,18 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 #     }
 # }
 
-print(f'NAME {os.environ['NAME']}')
-print(f'HOST {os.environ['HOST']}')
-print(f'USER {os.environ['USER']}')
-print(f'PASSWORD {os.environ['PASSWORD']}')
+print(f'NAME {os.environ['DB_NAME']}')
+print(f'HOST {os.environ['DB_HOST']}')
+print(f'USER {os.environ['DB_USER']}')
+print(f'PASSWORD {os.environ['DB_PASSWORD']}')
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ['NAME'],
-        'HOST': os.environ['HOST'],
-        'USER': os.environ['USER'],
-        'PASSWORD': os.environ['PASSWORD'],
+        'NAME': os.environ['DB_NAME'],
+        'HOST': os.environ['DB_HOST'],
+        'USER': os.environ['DB_USER'],
+        'PASSWORD': os.environ['DB_PASSWORD'],
         'PORT': '',
     }
 }
