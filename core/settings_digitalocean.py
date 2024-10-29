@@ -5,11 +5,11 @@ from .settings import BASE_DIR
 print(f'DigitalOcean settings')
 
 SECRET_KEY = os.environ['SECRET_KEY']
-print('Secret')
-print(f'secret {SECRET_KEY}')
+# print('Secret')
+# print(f'secret {SECRET_KEY}')
 ALLOWED_HOSTS = ['*','.ajmvfr.xyz','.anthonymorgan.xyz','localhost','127.0.0.1','143.244.151.87']
 # ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME'],'.ajmvfr.xyz','.anthonymorgan.xyz']
-print(f"website host: {os.environ['WEBSITE_HOSTNAME']}")
+# print(f"website host: {os.environ['WEBSITE_HOSTNAME']}")
 # CSRF_TRUSTED_ORIGINS = ['https://' + os.environ['WEBSITE_HOSTNAME'],'https://*.ajmvfr.xyz','https://*.anthonymorgan.xyz']
 # CSRF_TRUSTED_ORIGINS = ['https://' + os.environ['WEBSITE_HOSTNAME'],'https://*.ajmvfr.xyz','https://*.anthonymorgan.xyz','https://localhost','http://localhost','https://127.0.0.1','http://143.244.151.87','https://143.244.151.87']
 DEBUG = True
@@ -59,10 +59,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 #     }
 # }
 
-print(f'NAME {os.environ['NAME']}')
-print(f'HOST {os.environ['HOST']}')
-print(f'USER {os.environ['USER']}')
-print(f'PASSWORD {os.environ['PASSWORD']}')
+# print(f'NAME {os.environ['NAME']}')
+# print(f'HOST {os.environ['HOST']}')
+# print(f'USER {os.environ['USER']}')
+# print(f'PASSWORD {os.environ['PASSWORD']}')
 
 DATABASES = {
     'default': {
