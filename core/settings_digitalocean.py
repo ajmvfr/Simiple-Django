@@ -59,10 +59,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 #     }
 # }
 
-# print(f'NAME {os.environ['NAME']}')
-# print(f'HOST {os.environ['HOST']}')
-# print(f'USER {os.environ['USER']}')
-# print(f'PASSWORD {os.environ['PASSWORD']}')
+print(f'NAME {os.environ['NAME']}')
+print(f'HOST {os.environ['HOST']}')
+print(f'USER {os.environ['USER']}')
+print(f'PASSWORD {os.environ['PASSWORD']}')
 
 DATABASES = {
     'default': {
