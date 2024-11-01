@@ -11,7 +11,7 @@ ALLOWED_HOSTS = ['*','.ajmvfr.xyz','.anthonymorgan.xyz','localhost','127.0.0.1',
 # ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME'],'.ajmvfr.xyz','.anthonymorgan.xyz']
 # print(f"website host: {os.environ['WEBSITE_HOSTNAME']}")
 # CSRF_TRUSTED_ORIGINS = ['https://' + os.environ['WEBSITE_HOSTNAME'],'https://*.ajmvfr.xyz','https://*.anthonymorgan.xyz']
-# CSRF_TRUSTED_ORIGINS = ['https://' + os.environ['WEBSITE_HOSTNAME'],'https://*.ajmvfr.xyz','https://*.anthonymorgan.xyz','https://localhost','http://localhost','https://127.0.0.1','http://143.244.151.87','https://143.244.151.87']
+CSRF_TRUSTED_ORIGINS = ['https://' + os.environ['WEBSITE_HOSTNAME'],'https://*.ajmvfr.xyz','https://*.anthonymorgan.xyz','https://localhost','http://localhost','https://127.0.0.1','http://143.244.151.87','https://143.244.151.87']
 DEBUG = True
 
 
@@ -36,33 +36,10 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
-# conn_str = os.environ['AZURE_POSTGRESQL_CONNECTIONSTRING']
-# conn_str_params = {pair.split('=')[0]: pair.split('=')[1] for pair in conn_str.split(' ')}
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': conn_str_params['dbname'],
-#         'HOST': conn_str_params['host'],
-#         'USER': conn_str_params['user'],
-#         'PASSWORD': conn_str_params['password'],
-#     }
-# }
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': os.environ['DB_NAME'],
-#         'HOST': os.environ['DB_HOST'],
-#         'USER': os.environ['DB_USER'],
-#         'PASSWORD': os.environ['DB_PASSWORD'],
-#         'PORT': os.environ['DB_PORT']
-#     }
-# }
-
-print(f'NAME {os.environ['DB_NAME']}')
-print(f'HOST {os.environ['DB_HOST']}')
-print(f'USER {os.environ['DB_USER']}')
-print(f'PASSWORD {os.environ['DB_PASSWORD']}')
+# print(f'NAME {os.environ['DB_NAME']}')
+# print(f'HOST {os.environ['DB_HOST']}')
+# print(f'USER {os.environ['DB_USER']}')
+# print(f'PASSWORD {os.environ['DB_PASSWORD']}')
 
 DATABASES = {
     'default': {
